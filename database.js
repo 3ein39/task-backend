@@ -14,7 +14,6 @@ CREATE TABLE USER (
     username TEXT,
     email TEXT,
     password TEXT,
-    other_attributes TEXT
 )`, (err) => {
     if (err) {
       console.error(err.message);
