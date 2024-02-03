@@ -2,6 +2,7 @@ const {GraphQLObjectType, GraphQLInt, GraphQLList} = require("graphql");
 const productType = require("../types/ProductType");
 const productImageType = require("../types/ProductImageType");
 const productRatingType = require("../types/ProductRatingType");
+const userType = require("../types/UserType");
 
 
 const sqlite3 = require('sqlite3').verbose();
@@ -71,6 +72,23 @@ const queryType = new GraphQLObjectType({
                             reject([]);
                         }
                         resolve(rows);
+                    });
+                });
+            }
+        },
+        userGetByID : {
+            type: userType,
+            args: {
+                user_id: { type: GraphQLInt }
+            },
+            resolve: (source, args, context, info) => {
+                return new Promise((resolve, reject) => {
+                    db.get('SELECT * FROM USER WHERE user_id = ?', [args.user_id], (err, row) => {
+                        if (err) {
+                            // console.error(err);
+                            reject(null);
+                        }
+                        resolve(row);
                     });
                 });
             }
