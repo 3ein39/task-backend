@@ -30,7 +30,7 @@ const productType = new GraphQLObjectType({
 const queryType = new GraphQLObjectType({
     name: 'Query',
     fields: {
-        product : {
+        productGetByID : {
             type: productType,
             args: {
                 product_id: { type: GraphQLInt }
@@ -47,7 +47,7 @@ const queryType = new GraphQLObjectType({
                 });
             }
         },
-        products: {
+        productGetAll: {
             type: new GraphQLList(productType),
             resolve: (source, args, context, info) => {
                 return new Promise((resolve, reject) => {
