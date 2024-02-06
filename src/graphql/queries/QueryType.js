@@ -66,6 +66,19 @@ const queryType = new GraphQLObjectType({
                 });
             }
         },
+        productGetAllWithImages: {
+            type: new GraphQLList(productType), resolve: (source, args, context, info) => {
+                return new Promise((resolve, reject) => {
+                    db.all('SELECT * FROM PRODUCT', (err, rows) => {
+                        if (err) {
+                            // console.error(err);
+                            reject([]);
+                        }
+                        resolve(rows);
+                    });
+                });
+            }
+        },
         userGetByID: {
             type: userType, args: {
                 user_id: {type: GraphQLInt}

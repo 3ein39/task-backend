@@ -1,4 +1,8 @@
-const {GraphQLObjectType, GraphQLInt, GraphQLString, GraphQLFloat} = require("graphql");
+const {GraphQLObjectType, GraphQLInt, GraphQLString, GraphQLFloat, GraphQLList} = require("graphql");
+const productImageType = require("./ProductImageType");
+
+const sqlite3 = require('sqlite3').verbose();
+let db = new sqlite3.Database('./myDatabase.db');
 
 const productType = new GraphQLObjectType({
     name: 'Product',
@@ -15,7 +19,20 @@ const productType = new GraphQLObjectType({
         overview: { type: GraphQLString },
         gender: { type: GraphQLString },
         capacity: { type: GraphQLString },
-        model_number: { type: GraphQLString }
+        model_number: { type: GraphQLString },
+        images: {
+            type: new GraphQLList(productImageType), resolve: (source, args, context, info) => {
+                return new Promise((resolve, reject) => {
+                    db.all('SELECT * FROM PRODUCT_IMAGES WHERE product_id = ?', [source.product_id], (err, rows) => {
+                        if (err) {
+                            // console.error(err);
+                            reject([]);
+                        }
+                        resolve(rows);
+                    });
+                });
+            }
+        } 
     }
 });
 
