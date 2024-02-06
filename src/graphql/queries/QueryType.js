@@ -3,6 +3,7 @@ const productType = require("../types/ProductType");
 const productImageType = require("../types/ProductImageType");
 const productRatingType = require("../types/ProductRatingType");
 const userType = require("../types/UserType");
+const categoryType = require("../types/CategoryType");
 
 
 const sqlite3 = require('sqlite3').verbose();
@@ -76,6 +77,19 @@ const queryType = new GraphQLObjectType({
                             reject(null);
                         }
                         resolve(row);
+                    });
+                });
+            }
+        },
+        categoryGetAll: {
+            type: new GraphQLList(categoryType), resolve: (source, args, context, info) => {
+                return new Promise((resolve, reject) => {
+                    db.all('SELECT * FROM CATEGORIES', (err, rows) => {
+                        if (err) {
+                            // console.error(err);
+                            reject([]);
+                        }
+                        resolve(rows);
                     });
                 });
             }
