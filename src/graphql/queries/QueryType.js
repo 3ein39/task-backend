@@ -79,6 +79,21 @@ const queryType = new GraphQLObjectType({
                 });
             }
         },
+        productAverageRating: {
+            type: GraphQLInt, args: {
+                product_id: {type: GraphQLInt}
+            }, resolve: (source, args, context, info) => {
+                return new Promise((resolve, reject) => {
+                    db.get('SELECT AVG(rating) as average FROM PRODUCT_RATINGS WHERE product_id = ?', [args.product_id], (err, row) => {
+                        if (err) {
+                            // console.error(err);
+                            reject(null);
+                        }
+                        resolve(row.average);
+                    });
+                });
+            }
+        },
         userGetByID: {
             type: userType, args: {
                 user_id: {type: GraphQLInt}
