@@ -2,14 +2,13 @@ const { GraphQLSchema, GraphQLObjectType, GraphQLString, GraphQLList } = require
 const { GraphQLInt, GraphQLFloat } = require('graphql');
 const sqlite3 = require('sqlite3').verbose();
 
-const productType = require('./types/ProductType');
 const queryType = require('./queries/QueryType');
-
-let db = new sqlite3.Database('./myDatabase.db');
+const mutationType = require('./mutations/language');
 
 
 const schema = new GraphQLSchema({
-    query: queryType
+    query: queryType,
+    mutation: mutationType
 });
 
 module.exports = schema;

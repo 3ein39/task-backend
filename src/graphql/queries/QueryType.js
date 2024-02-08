@@ -1,17 +1,25 @@
-const {GraphQLObjectType, GraphQLInt, GraphQLList} = require("graphql");
+const {GraphQLObjectType, GraphQLInt, GraphQLList, GraphQLString} = require("graphql");
 const productType = require("../types/ProductType");
 const productImageType = require("../types/ProductImageType");
 const productRatingType = require("../types/ProductRatingType");
 const userType = require("../types/UserType");
 const categoryType = require("../types/CategoryType");
 
-
+const i18next = require("i18next");
+const { t } = i18next;
 const sqlite3 = require('sqlite3').verbose();
 let db = new sqlite3.Database('./myDatabase.db');
 
+
+
 const queryType = new GraphQLObjectType({
     name: 'Query', fields: {
-        productGetByID: {
+        sayHello: {
+            type: GraphQLString, resolve: () => {
+                return t('welcome');
+            }
+        }
+        ,productGetByID: {
             type: productType, args: {
                 product_id: {type: GraphQLInt}
             }, resolve: (source, args, context, info) => {
