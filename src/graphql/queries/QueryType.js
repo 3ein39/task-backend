@@ -21,13 +21,22 @@ const queryType = new GraphQLObjectType({
         }
         ,productGetByID: {
             type: productType, args: {
-                product_id: {type: GraphQLInt}
+                product_id: { type: GraphQLInt },
+                locale: { type: GraphQLString }
             }, resolve: (source, args, context, info) => {
                 return new Promise((resolve, reject) => {
                     db.get('SELECT * FROM PRODUCT WHERE product_id = ?', [args.product_id], (err, row) => {
                         if (err) {
-                            // console.error(err);
                             reject(null);
+                        }
+                        
+                        i18next.changeLanguage(args.locale);
+                        if (args.locale === 'ar') {
+                            row.title = i18next.t('1.title');
+                            row.description = i18next.t('1.description');
+                            row.benefits = i18next.t('1.benefits');
+                            row.overview = i18next.t('1.overview');
+
                         }
                         resolve(row);
                     });

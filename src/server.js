@@ -13,8 +13,8 @@ app.use(cors())
 i18next
     .use(Backend)
     .init({
-        lng: 'en',
-        fallbackLng: 'en',
+        lng: 'ar',
+        fallbackLng: 'ar',
         debug: true,
         backend: {
             loadPath: 'src/locales/{{lng}}/translation.json'
