@@ -93,7 +93,7 @@ db.serialize(() => {
         INSERT INTO PRODUCT (title, description, brand, price, discounted_price, vat, gained_points, benefits, overview,
                              gender, capacity, model_number)
         VALUES ('Centrum', 'Multivitamin - 30 pcs', 'Multigummies', 1400, 1290, 10.0, 10,
-                'This is benefits placeholder', 'This is overview placeholder', 'Both', '30 pcs', '119269')`,
+                'A product that leaves your skin calm and fragrant with a light scent all day\nA non-greasy formula that quickly melts into the skin\nRefreshes and moisturizes the skin thanks to jojoba oil and vitamin E\nVery effective on the face, hands, and body\nLet your skin experience tropical wonders with this moisturizing cream', 'Revive your skin and enjoy the delicate moisturizing cream with a joyful zesty scent of tropical fruits. NIVEA Soft Freshies absorbs quickly into the skin, making the skin feel refreshingly moist. Caring formula with Vitamine E and Jojoba Oil makes your skin feel noticeably relaxed, refreshed and smoother. For your handbag or at home: NIVEA Soft. Ingredients:- Aqua, Glycerin, Paraffinum Liquidum, Myristyl Alcohol, Butylene Glycol, Alcohol Denat., Stearic Acid, Myristyl Myristate, Cera Microcristallina, Glyceryl Stearate, Hydrogenated Coco-Glycerides, Simmondsia Chinensis Seed Oil, Tocopheryl Acetate, Lanolin Alcohol (Eucerit), Polyglyceryl-2 Caprate, Dimethicone, Sodium Hydroxide, Carbomer, Phenoxyethanol, Limonene, Coumarin, Citronellol, Parfum.', 'Both', '30 pcs', '119269')`,
     (err) => {
       if (err) {
         console.error(err.message);
@@ -106,61 +106,131 @@ db.serialize(() => {
         INSERT INTO PRODUCT (title, description, brand, price, discounted_price, vat, gained_points, benefits, overview,
                              gender, capacity, model_number)
         VALUES ('Centrum', 'Multivitamin - 30 pcs', 'Multigummies', 1400, 1290, 10.0, 10,
-                'This is benefits placeholder', 'This is overview placeholder', 'Both', '30 pcs', '119269')`,
+                'A product that leaves your skin calm and fragrant with a light scent all day\nA non-greasy formula that quickly melts into the skin\nRefreshes and moisturizes the skin thanks to jojoba oil and vitamin E\nVery effective on the face, hands, and body\nLet your skin experience tropical wonders with this moisturizing cream', 'Revive your skin and enjoy the delicate moisturizing cream with a joyful zesty scent of tropical fruits. NIVEA Soft Freshies absorbs quickly into the skin, making the skin feel refreshingly moist. Caring formula with Vitamine E and Jojoba Oil makes your skin feel noticeably relaxed, refreshed and smoother. For your handbag or at home: NIVEA Soft. Ingredients:- Aqua, Glycerin, Paraffinum Liquidum, Myristyl Alcohol, Butylene Glycol, Alcohol Denat., Stearic Acid, Myristyl Myristate, Cera Microcristallina, Glyceryl Stearate, Hydrogenated Coco-Glycerides, Simmondsia Chinensis Seed Oil, Tocopheryl Acetate, Lanolin Alcohol (Eucerit), Polyglyceryl-2 Caprate, Dimethicone, Sodium Hydroxide, Carbomer, Phenoxyethanol, Limonene, Coumarin, Citronellol, Parfum.', 'Both', '30 pcs', '119269')`,
     (err) => {
       if (err) {
         console.error(err.message);
       }
     }
   );
+
   db.run(
     `
         INSERT INTO PRODUCT (title, description, brand, price, discounted_price, vat, gained_points, benefits, overview,
                              gender, capacity, model_number)
         VALUES ('Centrum', 'Multivitamin - 30 pcs', 'Multigummies', 1400, 1290, 10.0, 10,
-                'This is benefits placeholder', 'This is overview placeholder', 'Both', '30 pcs', '119269')`,
+                'A product that leaves your skin calm and fragrant with a light scent all day\nA non-greasy formula that quickly melts into the skin\nRefreshes and moisturizes the skin thanks to jojoba oil and vitamin E\nVery effective on the face, hands, and body\nLet your skin experience tropical wonders with this moisturizing cream', 'Revive your skin and enjoy the delicate moisturizing cream with a joyful zesty scent of tropical fruits. NIVEA Soft Freshies absorbs quickly into the skin, making the skin feel refreshingly moist. Caring formula with Vitamine E and Jojoba Oil makes your skin feel noticeably relaxed, refreshed and smoother. For your handbag or at home: NIVEA Soft. Ingredients:- Aqua, Glycerin, Paraffinum Liquidum, Myristyl Alcohol, Butylene Glycol, Alcohol Denat., Stearic Acid, Myristyl Myristate, Cera Microcristallina, Glyceryl Stearate, Hydrogenated Coco-Glycerides, Simmondsia Chinensis Seed Oil, Tocopheryl Acetate, Lanolin Alcohol (Eucerit), Polyglyceryl-2 Caprate, Dimethicone, Sodium Hydroxide, Carbomer, Phenoxyethanol, Limonene, Coumarin, Citronellol, Parfum.', 'Both', '30 pcs', '119269')`,
     (err) => {
       if (err) {
         console.error(err.message);
       }
     }
   );
+
   db.run(
     `
         INSERT INTO PRODUCT (title, description, brand, price, discounted_price, vat, gained_points, benefits, overview,
                              gender, capacity, model_number)
         VALUES ('Centrum', 'Multivitamin - 30 pcs', 'Multigummies', 1400, 1290, 10.0, 10,
-                'This is benefits placeholder', 'This is overview placeholder', 'Both', '30 pcs', '119269')`,
+                'A product that leaves your skin calm and fragrant with a light scent all day\nA non-greasy formula that quickly melts into the skin\nRefreshes and moisturizes the skin thanks to jojoba oil and vitamin E\nVery effective on the face, hands, and body\nLet your skin experience tropical wonders with this moisturizing cream', 'Revive your skin and enjoy the delicate moisturizing cream with a joyful zesty scent of tropical fruits. NIVEA Soft Freshies absorbs quickly into the skin, making the skin feel refreshingly moist. Caring formula with Vitamine E and Jojoba Oil makes your skin feel noticeably relaxed, refreshed and smoother. For your handbag or at home: NIVEA Soft. Ingredients:- Aqua, Glycerin, Paraffinum Liquidum, Myristyl Alcohol, Butylene Glycol, Alcohol Denat., Stearic Acid, Myristyl Myristate, Cera Microcristallina, Glyceryl Stearate, Hydrogenated Coco-Glycerides, Simmondsia Chinensis Seed Oil, Tocopheryl Acetate, Lanolin Alcohol (Eucerit), Polyglyceryl-2 Caprate, Dimethicone, Sodium Hydroxide, Carbomer, Phenoxyethanol, Limonene, Coumarin, Citronellol, Parfum.', 'Both', '30 pcs', '119269')`,
     (err) => {
       if (err) {
         console.error(err.message);
       }
     }
   );
+
   db.run(
     `
         INSERT INTO PRODUCT (title, description, brand, price, discounted_price, vat, gained_points, benefits, overview,
                              gender, capacity, model_number)
         VALUES ('Centrum', 'Multivitamin - 30 pcs', 'Multigummies', 1400, 1290, 10.0, 10,
-                'This is benefits placeholder', 'This is overview placeholder', 'Both', '30 pcs', '119269')`,
+                'A product that leaves your skin calm and fragrant with a light scent all day\nA non-greasy formula that quickly melts into the skin\nRefreshes and moisturizes the skin thanks to jojoba oil and vitamin E\nVery effective on the face, hands, and body\nLet your skin experience tropical wonders with this moisturizing cream', 'Revive your skin and enjoy the delicate moisturizing cream with a joyful zesty scent of tropical fruits. NIVEA Soft Freshies absorbs quickly into the skin, making the skin feel refreshingly moist. Caring formula with Vitamine E and Jojoba Oil makes your skin feel noticeably relaxed, refreshed and smoother. For your handbag or at home: NIVEA Soft. Ingredients:- Aqua, Glycerin, Paraffinum Liquidum, Myristyl Alcohol, Butylene Glycol, Alcohol Denat., Stearic Acid, Myristyl Myristate, Cera Microcristallina, Glyceryl Stearate, Hydrogenated Coco-Glycerides, Simmondsia Chinensis Seed Oil, Tocopheryl Acetate, Lanolin Alcohol (Eucerit), Polyglyceryl-2 Caprate, Dimethicone, Sodium Hydroxide, Carbomer, Phenoxyethanol, Limonene, Coumarin, Citronellol, Parfum.', 'Both', '30 pcs', '119269')`,
     (err) => {
       if (err) {
         console.error(err.message);
       }
     }
   );
+
   db.run(
     `
         INSERT INTO PRODUCT (title, description, brand, price, discounted_price, vat, gained_points, benefits, overview,
                              gender, capacity, model_number)
         VALUES ('Centrum', 'Multivitamin - 30 pcs', 'Multigummies', 1400, 1290, 10.0, 10,
-                'This is benefits placeholder', 'This is overview placeholder', 'Both', '30 pcs', '119269')`,
+                'A product that leaves your skin calm and fragrant with a light scent all day\nA non-greasy formula that quickly melts into the skin\nRefreshes and moisturizes the skin thanks to jojoba oil and vitamin E\nVery effective on the face, hands, and body\nLet your skin experience tropical wonders with this moisturizing cream', 'Revive your skin and enjoy the delicate moisturizing cream with a joyful zesty scent of tropical fruits. NIVEA Soft Freshies absorbs quickly into the skin, making the skin feel refreshingly moist. Caring formula with Vitamine E and Jojoba Oil makes your skin feel noticeably relaxed, refreshed and smoother. For your handbag or at home: NIVEA Soft. Ingredients:- Aqua, Glycerin, Paraffinum Liquidum, Myristyl Alcohol, Butylene Glycol, Alcohol Denat., Stearic Acid, Myristyl Myristate, Cera Microcristallina, Glyceryl Stearate, Hydrogenated Coco-Glycerides, Simmondsia Chinensis Seed Oil, Tocopheryl Acetate, Lanolin Alcohol (Eucerit), Polyglyceryl-2 Caprate, Dimethicone, Sodium Hydroxide, Carbomer, Phenoxyethanol, Limonene, Coumarin, Citronellol, Parfum.', 'Both', '30 pcs', '119269')`,
     (err) => {
       if (err) {
         console.error(err.message);
       }
     }
   );
+
+  db.run(
+    `
+        INSERT INTO PRODUCT (title, description, brand, price, discounted_price, vat, gained_points, benefits, overview,
+                             gender, capacity, model_number)
+        VALUES ('Centrum', 'Multivitamin - 30 pcs', 'Multigummies', 1400, 1290, 10.0, 10,
+                'A product that leaves your skin calm and fragrant with a light scent all day\nA non-greasy formula that quickly melts into the skin\nRefreshes and moisturizes the skin thanks to jojoba oil and vitamin E\nVery effective on the face, hands, and body\nLet your skin experience tropical wonders with this moisturizing cream', 'Revive your skin and enjoy the delicate moisturizing cream with a joyful zesty scent of tropical fruits. NIVEA Soft Freshies absorbs quickly into the skin, making the skin feel refreshingly moist. Caring formula with Vitamine E and Jojoba Oil makes your skin feel noticeably relaxed, refreshed and smoother. For your handbag or at home: NIVEA Soft. Ingredients:- Aqua, Glycerin, Paraffinum Liquidum, Myristyl Alcohol, Butylene Glycol, Alcohol Denat., Stearic Acid, Myristyl Myristate, Cera Microcristallina, Glyceryl Stearate, Hydrogenated Coco-Glycerides, Simmondsia Chinensis Seed Oil, Tocopheryl Acetate, Lanolin Alcohol (Eucerit), Polyglyceryl-2 Caprate, Dimethicone, Sodium Hydroxide, Carbomer, Phenoxyethanol, Limonene, Coumarin, Citronellol, Parfum.', 'Both', '30 pcs', '119269')`,
+    (err) => {
+      if (err) {
+        console.error(err.message);
+      }
+    }
+  );
+
+  db.run(
+    `
+        INSERT INTO PRODUCT (title, description, brand, price, discounted_price, vat, gained_points, benefits, overview,
+                             gender, capacity, model_number)
+        VALUES ('Centrum', 'Multivitamin - 30 pcs', 'Multigummies', 1400, 1290, 10.0, 10,
+                'A product that leaves your skin calm and fragrant with a light scent all day\nA non-greasy formula that quickly melts into the skin\nRefreshes and moisturizes the skin thanks to jojoba oil and vitamin E\nVery effective on the face, hands, and body\nLet your skin experience tropical wonders with this moisturizing cream', 'Revive your skin and enjoy the delicate moisturizing cream with a joyful zesty scent of tropical fruits. NIVEA Soft Freshies absorbs quickly into the skin, making the skin feel refreshingly moist. Caring formula with Vitamine E and Jojoba Oil makes your skin feel noticeably relaxed, refreshed and smoother. For your handbag or at home: NIVEA Soft. Ingredients:- Aqua, Glycerin, Paraffinum Liquidum, Myristyl Alcohol, Butylene Glycol, Alcohol Denat., Stearic Acid, Myristyl Myristate, Cera Microcristallina, Glyceryl Stearate, Hydrogenated Coco-Glycerides, Simmondsia Chinensis Seed Oil, Tocopheryl Acetate, Lanolin Alcohol (Eucerit), Polyglyceryl-2 Caprate, Dimethicone, Sodium Hydroxide, Carbomer, Phenoxyethanol, Limonene, Coumarin, Citronellol, Parfum.', 'Both', '30 pcs', '119269')`,
+    (err) => {
+      if (err) {
+        console.error(err.message);
+      }
+    }
+  );
+
+  db.run(
+    `
+        INSERT INTO PRODUCT (title, description, brand, price, discounted_price, vat, gained_points, benefits, overview,
+                             gender, capacity, model_number)
+        VALUES ('Centrum', 'Multivitamin - 30 pcs', 'Multigummies', 1400, 1290, 10.0, 10,
+                'A product that leaves your skin calm and fragrant with a light scent all day\nA non-greasy formula that quickly melts into the skin\nRefreshes and moisturizes the skin thanks to jojoba oil and vitamin E\nVery effective on the face, hands, and body\nLet your skin experience tropical wonders with this moisturizing cream', 'Revive your skin and enjoy the delicate moisturizing cream with a joyful zesty scent of tropical fruits. NIVEA Soft Freshies absorbs quickly into the skin, making the skin feel refreshingly moist. Caring formula with Vitamine E and Jojoba Oil makes your skin feel noticeably relaxed, refreshed and smoother. For your handbag or at home: NIVEA Soft. Ingredients:- Aqua, Glycerin, Paraffinum Liquidum, Myristyl Alcohol, Butylene Glycol, Alcohol Denat., Stearic Acid, Myristyl Myristate, Cera Microcristallina, Glyceryl Stearate, Hydrogenated Coco-Glycerides, Simmondsia Chinensis Seed Oil, Tocopheryl Acetate, Lanolin Alcohol (Eucerit), Polyglyceryl-2 Caprate, Dimethicone, Sodium Hydroxide, Carbomer, Phenoxyethanol, Limonene, Coumarin, Citronellol, Parfum.', 'Both', '30 pcs', '119269')`,
+    (err) => {
+      if (err) {
+        console.error(err.message);
+      }
+    }
+  );
+
+  db.run(
+    `
+        INSERT INTO PRODUCT (title, description, brand, price, discounted_price, vat, gained_points, benefits, overview,
+                             gender, capacity, model_number)
+        VALUES ('Centrum', 'Multivitamin - 30 pcs', 'Multigummies', 1400, 1290, 10.0, 10,
+                'A product that leaves your skin calm and fragrant with a light scent all day\nA non-greasy formula that quickly melts into the skin\nRefreshes and moisturizes the skin thanks to jojoba oil and vitamin E\nVery effective on the face, hands, and body\nLet your skin experience tropical wonders with this moisturizing cream', 'Revive your skin and enjoy the delicate moisturizing cream with a joyful zesty scent of tropical fruits. NIVEA Soft Freshies absorbs quickly into the skin, making the skin feel refreshingly moist. Caring formula with Vitamine E and Jojoba Oil makes your skin feel noticeably relaxed, refreshed and smoother. For your handbag or at home: NIVEA Soft. Ingredients:- Aqua, Glycerin, Paraffinum Liquidum, Myristyl Alcohol, Butylene Glycol, Alcohol Denat., Stearic Acid, Myristyl Myristate, Cera Microcristallina, Glyceryl Stearate, Hydrogenated Coco-Glycerides, Simmondsia Chinensis Seed Oil, Tocopheryl Acetate, Lanolin Alcohol (Eucerit), Polyglyceryl-2 Caprate, Dimethicone, Sodium Hydroxide, Carbomer, Phenoxyethanol, Limonene, Coumarin, Citronellol, Parfum.', 'Both', '30 pcs', '119269')`,
+    (err) => {
+      if (err) {
+        console.error(err.message);
+      }
+    }
+  );
+
+  db.run(
+    `
+        INSERT INTO PRODUCT (title, description, brand, price, discounted_price, vat, gained_points, benefits, overview,
+                             gender, capacity, model_number)
+        VALUES ('Centrum', 'Multivitamin - 30 pcs', 'Multigummies', 1400, 1290, 10.0, 10,
+                'A product that leaves your skin calm and fragrant with a light scent all day\nA non-greasy formula that quickly melts into the skin\nRefreshes and moisturizes the skin thanks to jojoba oil and vitamin E\nVery effective on the face, hands, and body\nLet your skin experience tropical wonders with this moisturizing cream', 'Revive your skin and enjoy the delicate moisturizing cream with a joyful zesty scent of tropical fruits. NIVEA Soft Freshies absorbs quickly into the skin, making the skin feel refreshingly moist. Caring formula with Vitamine E and Jojoba Oil makes your skin feel noticeably relaxed, refreshed and smoother. For your handbag or at home: NIVEA Soft. Ingredients:- Aqua, Glycerin, Paraffinum Liquidum, Myristyl Alcohol, Butylene Glycol, Alcohol Denat., Stearic Acid, Myristyl Myristate, Cera Microcristallina, Glyceryl Stearate, Hydrogenated Coco-Glycerides, Simmondsia Chinensis Seed Oil, Tocopheryl Acetate, Lanolin Alcohol (Eucerit), Polyglyceryl-2 Caprate, Dimethicone, Sodium Hydroxide, Carbomer, Phenoxyethanol, Limonene, Coumarin, Citronellol, Parfum.', 'Both', '30 pcs', '119269')`,
+    (err) => {
+      if (err) {
+        console.error(err.message);
+      }
+    }
+  );
+
   db.run(
     `
         INSERT INTO PRODUCT_IMAGES (product_id, url, is_main)

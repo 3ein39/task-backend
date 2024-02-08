@@ -1,4 +1,8 @@
 {
     "welcome": "Welcome",
-    "goodbye": "Goodbye"
+    "goodbye": "Goodbye",
+    "centrum": {
+        "title": "Centrum",
+        "description": "MultiVitamin"
+    }
 }
