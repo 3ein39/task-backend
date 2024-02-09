@@ -120,6 +120,27 @@ const queryType = new GraphQLObjectType({
         });
       },
     },
+    productGetRatingsCountByID: {
+      type: GraphQLInt,
+      args: {
+        product_id: { type: GraphQLInt },
+      },
+      resolve: (source, args, context, info) => {
+        return new Promise((resolve, reject) => {
+          db.get(
+            "SELECT COUNT(*) as count FROM PRODUCT_RATINGS WHERE product_id = ?",
+            [args.product_id],
+            (err, row) => {
+              if (err) {
+                // console.error(err);
+                reject(null);
+              }
+              resolve(row.count);
+            }
+          );
+        });
+      },
+    },
     productGetAllWithImages: {
       type: new GraphQLList(productType),
       args: { locale: { type: GraphQLString } },
