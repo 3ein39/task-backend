@@ -508,6 +508,37 @@ db.serialize(() => {
     }
   );
 
+  const productIds = [7, 8, 9, 10, 11];
+  const imageUrl = 'https://static.thcdn.com/images/large/webp/productimg/1600/1600/11423416-1554493886910365.jpg';
+
+  productIds.forEach(productId => {
+    // Insert main image
+    db.run(
+      `INSERT INTO PRODUCT_IMAGES (product_id, url, is_main)
+       VALUES (?, ?, true)`,
+      [productId, imageUrl],
+      (err) => {
+        if (err) {
+          console.error(err.message);
+        }
+      }
+    );
+
+    // Insert additional images
+    for (let i = 0; i < 3; i++) {
+      db.run(
+        `INSERT INTO PRODUCT_IMAGES (product_id, url, is_main)
+         VALUES (?, ?, false)`,
+        [productId, imageUrl],
+        (err) => {
+          if (err) {
+            console.error(err.message);
+          }
+        }
+      );
+    }
+  });
+
   db.run(
     `
         INSERT INTO PRODUCT_RATINGS (product_id, user_id, rating, comment)
