@@ -561,16 +561,26 @@ db.serialize(() => {
     }
   );
 
-  db.run(
-    `
-        INSERT INTO CATEGORIES (title, slug, parent_category_id)
-        VALUES ('Nutritional Vitamins', 'nutritional-vitamins', NULL)`,
-    (err) => {
-      if (err) {
-        console.error(err.message);
+  const categories = [
+    { title: 'Nutritional Vitamins', slug: 'nutritional-vitamins', parent_category_id: null },
+    { title: 'Health Supplements', slug: 'health-supplements', parent_category_id: null },
+    { title: 'Beauty Products', slug: 'beauty-products', parent_category_id: null },
+    
+  ];
+
+  categories.forEach(category => {
+    db.run(
+      `INSERT INTO CATEGORIES (title, slug, parent_category_id)
+       VALUES (?, ?, ?)`,
+      [category.title, category.slug, category.parent_category_id],
+      (err) => {
+        if (err) {
+          console.error(err.message);
+        }
       }
-    }
-  );
+    );
+  });
+  
 });
 
 db.close((err) => {

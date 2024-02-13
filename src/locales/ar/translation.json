@@ -87,6 +87,12 @@
     "categories" : {
         "nutritional-vitamins": {
             "title": "فيتامينات غذائية"
+        },
+        "health-supplements": {
+            "title": "مكملات غذائية"
+        },
+        "beauty-products": {
+            "title": "منتجات الجمال"
         }
     }
 }
