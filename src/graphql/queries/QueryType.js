@@ -232,6 +232,41 @@ const queryType = new GraphQLObjectType({
         });
       },
     },
+    // product get ratings group by rating
+    productGetRatingsGroupByRating: {
+      type: new GraphQLList(productRatingType),
+      args: {
+        product_id: { type: GraphQLInt },
+      },
+      resolve: (source, args, context, info) => {
+        return new Promise((resolve, reject) => {
+          db.all(
+            "SELECT rating, COUNT(*) as count FROM PRODUCT_RATINGS WHERE product_id = ? GROUP BY rating",
+            [args.product_id],
+            (err, rows) => {
+              if (err) {
+                // console.error(err);
+                reject([]);
+              }
+              // console.log("rows", rows);
+              // for ratings from 1 to 5, if no rating exists, add it with count 0
+              let ratings = [];
+              for (let i = 1; i <= 5; i++) {
+                let rating = rows.find((r) => r.rating === i);
+                if (rating) {
+                  ratings.push(rating);
+                } else {
+                  ratings.push({ rating: i, count: 0 });
+                }
+              }
+              // console.log("ratings", ratings);
+              resolve(ratings);
+              // resolve(rows);
+            }
+          );
+        });
+      },
+    },
   },
 });
 

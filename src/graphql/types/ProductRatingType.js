@@ -13,6 +13,7 @@ const productRatingType = new GraphQLObjectType({
         rating: { type: GraphQLFloat },
         comment: { type: GraphQLString },
         timestamp: { type: GraphQLString },
+        count: { type: GraphQLInt },
         user: {
             type: UsertType,
             resolve: (source, args, context, info) => {
